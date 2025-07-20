@@ -32,17 +32,17 @@ No biometric devices, no messy spreadsheets — just **location + time-based log
 ## 📸 Screenshots
 
 **Professor Dashboard**  
-![Professor Dashboard](screenshots/DemoScreenshot1.png)
+![Professor Dashboard](screenshots/DemoScreenshot1.jpg)
 
 ---
 
 **Student Dashboard**  
-![Student Dashboard](screenshots/DemoScreenshot2.png)
+![Student Dashboard](screenshots/DemoScreenshot2.jpg)
 
 ---
 
 **Attendance Report**  
-![Attendance Report](screenshots/DemoScreenshot3.png)
+![Attendance Report](screenshots/DemoScreenshot3.jpg)
 
 ---
 
@@ -63,7 +63,7 @@ For detailed answers, see [FAQ.md](FAQ.md).
 ## 🛠️ Build Instructions
 1. **Clone the repo**:
    ```bash
-   git clone https://github.com/YOURUSERNAME/presso.git
+   git clone https://github.com/AmeeteSh-A/presso.git
    ```
 2. Open in **Android Studio (Giraffe or newer)**.
 3. Add your own `google-services.json` from Firebase (replace `app/google-services.json.example`).
