@@ -1,0 +1,27 @@
+# Gradle
+.gradle/
+build/
+*/build/
+
+# Local config
+local.properties
+/.idea
+*.iml
+.DS_Store
+
+# Keystores
+*.jks
+*.keystore
+key.properties
+
+# Firebase / Secrets
+app/google-services.json
+app/src/*/res/raw/service_account.json
+
+# Logs
+*.log
+
+# Generated
+captures/
+.externalNativeBuild
+.cxx

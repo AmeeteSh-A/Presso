@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NameActivity">
+
+    <TextView
+        android:id="@+id/nameactivitytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:text="Enter Your Details"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nameactivitynameedittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/nameactivitytext"
+        tools:layout_editor_absoluteX="100dp" />
+
+    <Spinner
+        android:id="@+id/nameactivitybranchspinner"
+        android:layout_width="147dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameactivitynameedittext" />
+
+    <EditText
+        android:id="@+id/nameactivityrolledittext"
+        android:layout_width="82dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:hint="Roll No."
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="264dp" />
+
+    <Button
+        android:id="@+id/nameactivitysavebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Details"
+        app:iconTint="#00BCD4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="162dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

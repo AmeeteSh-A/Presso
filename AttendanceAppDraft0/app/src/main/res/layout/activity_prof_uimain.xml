@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/uibg"
+    tools:context=".ProfUIMain">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/back_arrows"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.085" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/sun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.086" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/csvexporterbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/togglebutton"
+        app:layout_constraintWidth_percent="0.9">
+
+
+        <LinearLayout
+            android:id="@+id/studentlistcontainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="6dp">
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/profwelcometext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/DarkBlue"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <ToggleButton
+        android:id="@+id/togglebutton"
+        android:layout_width="83dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/toggleonoff"
+        android:checked="false"
+        android:text="ToggleButton"
+        android:textColor="@drawable/toggletextselector"
+        android:textOff="Inactive"
+        android:textOn="Active"
+        app:layout_constraintEnd_toEndOf="@+id/attendancewindoetextview"
+        app:layout_constraintStart_toStartOf="@+id/attendancewindoetextview"
+        app:layout_constraintTop_toBottomOf="@+id/attendancewindoetextview" />
+
+    <TextView
+        android:id="@+id/subjecttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profwelcometext" />
+
+    <TextView
+        android:id="@+id/attendancewindoetextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="Attendance Window"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button4"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/solidbluebuttonselector"
+        android:stateListAnimator="@drawable/buttonpressedanimation"
+        android:text="Need Help? Let me know"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="1.1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/csvexporterbutton"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/solidbeigebuttonselector"
+        android:text="Export to CSV"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

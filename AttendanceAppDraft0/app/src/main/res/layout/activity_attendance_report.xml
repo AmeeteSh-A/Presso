@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.attendanceReportActivity"
+    android:background="@drawable/uibg">
+
+    <!-- Fixed top buttons -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/back_arrows"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.085" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/sun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.086" />
+
+    <!-- Fixed Title -->
+    <TextView
+        android:id="@+id/titleTextAttendanceReportPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/abyssinica_sil"
+        android:text="Attendance Report"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/titleTextAttendanceReportPage"
+        app:layout_constraintBottom_toTopOf="@id/needhelpbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/welcomeTextAttendanceReportPage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="16dp"
+                android:text="See how you're doing in each subject and stay on track!"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/subjectChoosingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Choose your subject"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/welcomeTextAttendanceReportPage" />
+
+            <Spinner
+                android:id="@+id/subjectChoosingSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.03"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:elevation="4dp"
+                android:background="@drawable/spinnerbg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.47"
+                app:layout_constraintStart_toEndOf="@+id/percentChoosingText"
+                app:layout_constraintTop_toBottomOf="@+id/subjectChoosingText"
+                app:layout_constraintWidth_percent="0.25" />
+
+            <TextView
+                android:id="@+id/percentChoosingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Target Attendance %"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/subjectChoosingSpinner" />
+
+            <Spinner
+                android:id="@+id/percentChoosingSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.03"
+                android:background="@drawable/spinnerbg"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/percentChoosingText"
+                app:layout_constraintTop_toBottomOf="@+id/percentChoosingText"
+                app:layout_constraintWidth_percent="0.25" />
+
+            <TextView
+                android:id="@+id/totalDaysTextView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/naklicardview"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Total Classes"
+                android:textColor="@color/black"
+                app:layout_constraintHeight_percent="0.05"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/percentChoosingSpinner"
+                app:layout_constraintWidth_percent="0.35" />
+
+            <TextView
+                android:id="@+id/totalDaysTextShower"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="50dp"
+                android:background="@drawable/naklicardview"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Loading..."
+                android:textColor="@color/teal"
+                android:textSize="20sp"
+                app:layout_constraintHeight_percent="0.05"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/totalDaysTextView"
+                app:layout_constraintWidth_percent="0.35" />
+
+            <TextView
+                android:id="@+id/presentDaysTextView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/naklicardview"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Total Attended"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.05"
+                app:layout_constraintTop_toBottomOf="@+id/percentChoosingSpinner"
+                app:layout_constraintWidth_percent="0.35" />
+
+            <TextView
+                android:id="@+id/presentDaysTextShower"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/naklicardview"
+                android:gravity="center"
+                android:text="Loading..."
+                android:textColor="@color/teal"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.05"
+                app:layout_constraintTop_toBottomOf="@+id/presentDaysTextView"
+                app:layout_constraintWidth_percent="0.35" />
+
+            <TextView
+                android:id="@+id/SubjecttotalDaysTextView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/naklicardview"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Subject Sessions"
+                android:textColor="@color/black"
+                app:layout_constraintHeight_percent="0.05"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/totalDaysTextShower"
+                app:layout_constraintWidth_percent="0.35" />
+
+            <TextView
+                android:id="@+id/SubjectTotalDaysTextShower"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="50dp"
+                android:background="@drawable/naklicardview"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Loading..."
+                android:textColor="@color/teal"
+                android:textSize="20sp"
+                app:layout_constraintHeight_percent="0.05"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SubjecttotalDaysTextView"
+                app:layout_constraintWidth_percent="0.35" />
+
+            <TextView
+                android:id="@+id/SubjectpresentDaysTextView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/naklicardview"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Subject Attendance"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.05"
+                app:layout_constraintTop_toBottomOf="@+id/presentDaysTextShower"
+                app:layout_constraintWidth_percent="0.35" />
+
+            <TextView
+                android:id="@+id/SubjectPresentDaysTextShower"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/naklicardview"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:text="Loading..."
+                android:textColor="@color/teal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.05"
+                app:layout_constraintTop_toBottomOf="@+id/SubjectpresentDaysTextView"
+                app:layout_constraintWidth_percent="0.35" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.25"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="24dp"
+                android:text="Overall Attendance"
+                android:gravity="center"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SubjectTotalDaysTextShower" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.25"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="65dp"
+                android:text="Subject Attendance"
+                android:gravity="center"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SubjectPresentDaysTextShower" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/totalAttendancePercentCircularIndicator"
+                android:layout_width="86dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="84dp"
+                android:layout_marginTop="16dp"
+                android:progress="85"
+                app:indicatorColor="#55e02b"
+                app:indicatorSize="72dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6"
+                app:trackColor="@color/black" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/subjectAttendancePercentCircularIndicator"
+                android:layout_width="500dp"
+                android:layout_height="500dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="84dp"
+                android:progress="39"
+                app:indicatorColor="#f0382b"
+                app:indicatorSize="72dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView13"
+                app:trackColor="@color/black" />
+
+            <TextView
+                android:id="@+id/totalAttendancePercentRemarks"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="..."
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/totalAttendancePercentCircularIndicator"
+                app:layout_constraintWidth_percent="0.35" />
+
+            <TextView
+                android:id="@+id/subjectAttendancePercentRemarks"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="45dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="..."
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/subjectAttendancePercentCircularIndicator"
+                app:layout_constraintWidth_percent="0.35" />
+
+            <TextView
+                android:id="@+id/totalAttendanceShowerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loading..."
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/totalAttendancePercentCircularIndicator"
+                app:layout_constraintEnd_toEndOf="@+id/totalAttendancePercentCircularIndicator"
+                app:layout_constraintStart_toStartOf="@+id/totalAttendancePercentCircularIndicator"
+                app:layout_constraintTop_toTopOf="@+id/totalAttendancePercentCircularIndicator" />
+
+            <TextView
+                android:id="@+id/subjectAttendanceShowerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loading..."
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/subjectAttendancePercentCircularIndicator"
+                app:layout_constraintEnd_toEndOf="@+id/subjectAttendancePercentCircularIndicator"
+                app:layout_constraintStart_toStartOf="@+id/subjectAttendancePercentCircularIndicator"
+                app:layout_constraintTop_toTopOf="@+id/subjectAttendancePercentCircularIndicator" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!-- Bottom fixed button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/needhelpbutton"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/solidbluebuttonselector"
+        android:stateListAnimator="@drawable/buttonpressedanimation"
+        android:text="Need Help? Let me know"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="1.1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

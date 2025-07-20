@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/attendanceappicon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/attendanceappicon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AttendanceAppDraft0"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.attendanceReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".loadingscreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AboutMePageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FaqPageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RatingPageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SupportPageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".needHelpMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfUIMain"
+            android:exported="false" />
+        <activity
+            android:name=".RoleSelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

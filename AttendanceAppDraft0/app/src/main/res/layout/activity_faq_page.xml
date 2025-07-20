@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/uibg"
+    tools:context=".FaqPageActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/helpmainback4"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/solidbluebuttonselector"
+        android:stateListAnimator="@drawable/buttonpressedanimation"
+        android:text="Back to dashboard"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="1.1" />
+
+    <TextView
+        android:id="@+id/contactlinktext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="5dp"
+        android:text="Not helpful? Contact the developer."
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/helpmainback4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/back_arrows"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.085" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/sun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.086" />
+
+    <TextView
+        android:id="@+id/titletextsupportpage2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/abyssinica_sil"
+        android:text="Frequently Asked Questions"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <TextView
+        android:id="@+id/welcometextsupportpage3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="2dp"
+        android:text="We've answered the ones we get the most — check them out below!"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titletextsupportpage2"
+        app:layout_constraintWidth_percent="0.90" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@id/contactlinktext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcometextsupportpage3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/question1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@color/transparent"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="▼   How do students mark attendance?"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/welcometextsupportpage3" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/question2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="▼   Why can't I mark my attendance?"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dynamic_anchorfrom1to2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/question3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="\n▼   How can I check if my attendance was recorded?"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dynamic_anchorfrom2to3" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/question4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="▼   How do professors take attendance?"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dynamic_anchorfrom3to4" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/question5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="\n▼   What if a student tries to mark attendance outside the window?"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dynamic_anchorfrom4to5" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/question6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="▼   Can I use the app offline?"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dynamic_anchorfrom5to6" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/question7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="▼   Can the app detect fake/mock locations?"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dynamic_anchorfrom6to7" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/question8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="▼   Can users update their rating later?"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dynamic_anchorfrom7to8" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/question9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="▼   How can I get help or report an issue?"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dynamic_anchorfrom8to9" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/question10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="▼   Is my data safe? What does the app collect?"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dynamic_anchorfrom9to10" />
+
+
+            <TextView
+                android:id="@+id/answer1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#1A000000"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="To mark attendance, log in using your academic name, select the subject, ensure all necessary permissions (especially location) are granted, and tap the 'Mark' button."
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/question1"
+                app:layout_constraintWidth_percent="0.9"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/answer2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#1A000000"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="There are a few possible reasons:\n●The professor hasn’t opened the attendance window (it stays open for 5 minutes).\n●Your internet connection is down, so the app can’t sync.\n●Location permissions aren't granted. Go to App Settings → Permissions → Location to enable them."
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/question2"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <TextView
+                android:id="@+id/answer3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#1A000000"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="After marking, your current status (Present/Absent) appears on the dashboard, right below the subject and professor’s name."
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/question3"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <TextView
+                android:id="@+id/answer4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#1A000000"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="Professors log in with their name, subject, and a developer-issued passcode. From the dashboard, they can toggle attendance ON.\nMake sure location is enabled and internet is active. The window auto-closes after 5 minutes, or it can be turned off manually. Professors can also manually update student statuses."
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/question4"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <TextView
+                android:id="@+id/answer5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#1A000000"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="It won't be recorded. The app will show a message saying the window is closed. The professor can either reopen it or manually mark the student as present."
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/question5"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <TextView
+                android:id="@+id/answer6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#1A000000"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="Attendance marking requires an internet connection. However, viewing your attendance history might work offline if it has already been synced."
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/question6"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <TextView
+                android:id="@+id/answer7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#1A000000"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="Currently, it uses fine and coarse location with high accuracy settings. Spoofing prevention is not guaranteed."
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/question7"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <TextView
+                android:id="@+id/answer8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#1A000000"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="Yes, users can update their rating anytime."
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/question8"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <TextView
+                android:id="@+id/answer9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#1A000000"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="Go to the Help and Support page to send feedback, bug reports, or queries directly to the developer via email."
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/question9"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <TextView
+                android:id="@+id/answer10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#1A000000"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="Yes, your data is safe. The app only stores the basic details you enter while signing up or logging in. Location access is used strictly for attendance marking and isn’t triggered at any other time. Also, Android allows you to grant location permission only while the app is in use, giving you full control over your privacy."
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/question10"
+                app:layout_constraintWidth_percent="0.9"
+                tools:visibility="visible" />
+
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/dynamic_anchorfrom1to2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="answer1" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/dynamic_anchorfrom2to3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="answer2" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/dynamic_anchorfrom3to4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="answer3" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/dynamic_anchorfrom4to5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="answer4" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/dynamic_anchorfrom5to6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="answer5" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/dynamic_anchorfrom6to7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="answer6" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/dynamic_anchorfrom7to8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="answer7" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/dynamic_anchorfrom8to9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="answer8" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/dynamic_anchorfrom9to10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="answer9" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/dynamic_anchorfrom10tocontactlinktext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="answer10" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

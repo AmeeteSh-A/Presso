@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FFFFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="DarkBlue">#FFFFFF</color>
+    <color name="Red">#FFFFFF</color>
+    <color name="Green">#FFFFFF</color>
+    <color name= "purple">#FFFFFF</color>
+    <color name= "goldenbeige">#FFFFFF</color>
+    <color name="oliveGreen">#FFFFFF</color>
+    <color name="goldenStarFilled">#FFd900</color>
+    <color name="golenStarUnfilled">#FFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name = "blackspecial">#000000</color>
+    <color name="teal">#26A69A</color>
+
+</resources>

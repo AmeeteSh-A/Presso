@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/uibg"
+    tools:context=".RatingPageActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/back_arrows"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.085" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/sun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.086" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/helpmainback2"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/solidbluebuttonselector"
+        android:stateListAnimator="@drawable/buttonpressedanimation"
+        android:text="Back to dashboard"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="1.1" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:hapticFeedbackEnabled="true"
+        android:progressTint="#F4C542"
+        android:progressBackgroundTint="#C2BEBE"
+        android:secondaryProgressTint="#C2BEBE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titletext" />
+
+    <TextView
+        android:id="@+id/ratingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submitButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="38dp"
+        android:background="@drawable/button_selector"
+        android:text="Submit"
+        android:textColor="@color/Green"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingText"
+        app:layout_constraintWidth_percent="0.25"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/changeratingbutton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="38dp"
+        android:background="@drawable/button_selector"
+        android:text="Change"
+        android:textColor="@color/Green"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingText"
+        app:layout_constraintWidth_percent="0.25"
+        tools:visibility="visible" />
+
+    <RatingBar
+        android:id="@+id/indicatorRatingBar"
+        android:layout_width="240dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:isIndicator="true"
+        android:progressTint="@color/goldenStarFilled"
+        android:progressBackgroundTint="#C2BEBE"
+        android:secondaryProgressTint="#C2BEBE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.308"
+        app:layout_constraintStart_toStartOf="parent"
+        android:stepSize="0.1"
+        app:layout_constraintTop_toBottomOf="@+id/titletext2" />
+
+    <TextView
+        android:id="@+id/titletext2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/abyssinica_sil"
+        android:text="The scorecard so far"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submitButton" />
+
+    <TextView
+        android:id="@+id/averageRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="28dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/indicatorRatingBar"
+        app:layout_constraintTop_toBottomOf="@+id/titletext2" />
+
+    <TextView
+        android:id="@+id/totalRatings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/indicatorRatingBar" />
+
+    <TextView
+        android:id="@+id/titletext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/abyssinica_sil"
+        android:text="How did I do?"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/thankyoutext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/abyssinica_sil"
+        android:text="Thank you for the rating"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        tools:visibility="visible" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

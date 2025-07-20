@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/uibg"
+    tools:context=".SupportPageActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/back_arrows"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.085" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/sun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.086" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/helpmainback3"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/solidbluebuttonselector"
+        android:stateListAnimator="@drawable/buttonpressedanimation"
+        android:text="Back to dashboard"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="1.1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submitbuttonSupportpage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_selector"
+        android:text="Submit via mail"
+        android:textColor="@color/Green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:layout_constraintWidth_percent="0.35"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/titletextsupportpage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/abyssinica_sil"
+        android:text="Something on your mind?"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <TextView
+        android:id="@+id/welcometextsupportpage"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.91"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:lineSpacingExtra="2dp"
+        android:text="Before submitting a query or a feedback, you might want to check the FAQ section under the assistance menu — your answer might already be there!\n\nStill got something to share? Feel free to drop your feedback or shoot a question out — I'll get back to you ASAP."
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titletextsupportpage" />
+
+    <EditText
+        android:id="@+id/textfieldsupportpage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/textfield"
+        android:ems="10"
+        android:textColorHint="#646664"
+        android:textColor="@color/blackspecial"
+        android:gravity="start"
+        android:hint="Describe your  feedback or issue here..."
+        android:inputType="text"
+        android:paddingStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textfieldsubheadingsupportpage"
+        app:layout_constraintWidth_percent="0.88" />
+
+    <CheckBox
+        android:id="@+id/versioncheckboxsupportpage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="7dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:paddingStart="0dp"
+        android:text="Include device info for better support"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/versionrequestsupportpage"
+        app:layout_constraintWidth_percent="0.88" />
+
+    <Spinner
+        android:id="@+id/spinnersupportpage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/textfield"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnersubheadingsupportpage"
+        app:layout_constraintWidth_percent="0.88" />
+
+    <TextView
+        android:id="@+id/spinnersubheadingsupportpage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:text="What is it about?"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcometextsupportpage" />
+
+    <TextView
+        android:id="@+id/textfieldsubheadingsupportpage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="12dp"
+        android:text="Tell me more"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnersupportpage" />
+
+    <TextView
+        android:id="@+id/versionrequestsupportpage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="12dp"
+        android:text="(Optional)"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textfieldsupportpage" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="335dp"
+        android:layout_height="38dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp"
+        android:text="Includes your phone model and system version so I can troubleshoot faster. No personal data is collected."
+        android:textColor="@color/DarkBlue"
+
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/versioncheckboxsupportpage" />
+</androidx.constraintlayout.widget.ConstraintLayout>

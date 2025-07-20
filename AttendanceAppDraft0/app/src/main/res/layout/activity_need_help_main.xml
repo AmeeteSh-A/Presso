@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/uibg"
+    tools:context=".needHelpMainActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/back_arrows"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.085" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/sun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.086" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/helpmainback"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/solidbluebuttonselector"
+        android:stateListAnimator="@drawable/buttonpressedanimation"
+        android:text="Back to dashboard"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="1.1" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/abyssinica_sil"
+        android:text="Help and Info"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/supportbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="-100dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/supportbutton"
+        android:text="Facing an Issue?"
+        android:textColor="@color/blackspecial"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/faqbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="-100dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/supportbutton"
+        android:text="Got questions?"
+        android:textColor="@color/blackspecial"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/supportbutton" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ratingbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="-100dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/supportbutton"
+        android:text="Be the judge"
+        android:textColor="@color/blackspecial"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/faqbutton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
