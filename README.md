@@ -20,12 +20,26 @@ No biometric devices, no messy spreadsheets — just **location + time-based log
 
 ---
 
+## 🌟 Features at a Glance
+- Plug-and-play setup — no extra hardware needed.  
+- Accurate, location-based attendance verification.  
+- Daily reset logic ensures clean records every day.  
+- Export-ready attendance reports (CSV).  
+- Student-side attendance history and percentage tracking.  
+
+---
+
 ## 📸 Screenshots
+
 **Professor Dashboard**  
 ![Professor Dashboard](screenshots/DemoScreenshot1.png)
 
+---
+
 **Student Dashboard**  
 ![Student Dashboard](screenshots/DemoScreenshot2.png)
+
+---
 
 **Attendance Report**  
 ![Attendance Report](screenshots/DemoScreenshot3.png)
@@ -51,14 +65,19 @@ For detailed answers, see [FAQ.md](FAQ.md).
    ```bash
    git clone https://github.com/YOURUSERNAME/presso.git
    ```
-2. Open in **Android Studio**.
+2. Open in **Android Studio (Giraffe or newer)**.
 3. Add your own `google-services.json` from Firebase (replace `app/google-services.json.example`).
-4. Build and run.
+4. **Sync Gradle** and run the project on an emulator or device.
 
 ---
 
 ## 📜 License
 This project is licensed under the [Apache License 2.0](LICENSE).
+
+---
+
+## 📄 Brochure
+For a quick visual overview of Presso, see our [Brochure (PDF)](brochure/Brochure_Presso.pdf).
 
 ---
 
